@@ -2,24 +2,21 @@
     /* Cores */
     --header-background-color-v1: #0b1346;
     --header-background-color-v2: #1c2e9a;
-
     --main-background-color: #001f37;
+    --footer-background-color: #0d0c10;
     --first-page-background-color: #698eff6c;
-    --hover-effects: #436fff;
-    --links-color: #75a3ff;
 
-    --normal-text-color: #78aaff;
     --headings-color: #3b83ff;
-
-
-
-    --cor-preto: #191a1b;
-    --cor-cinza-claro: #b0b5bb;
+    --normal-text-color: #78aaff;
+    --links-color: #75a3ff;
+    
+    --hover-effects: #436fff;
 
     /* Fontes */
     --mozilla-headline-font: "Mozilla Headline", sans-serif;
     --momo-font: "Momo Trust Display", sans-serif;
     --jetbrains-mono-font: "JetBrains Mono", monospace;
+    --funnel-display: "Funnel Display", sans-serif;
 }
 
 * {
@@ -33,8 +30,8 @@ html {
 }
 
 html::selection {
-    background-color: lightcyan;
-    color: red;
+    background-color: rgb(32, 30, 85);
+    color: rgb(231, 45, 45);
 }
 
 header {
@@ -51,11 +48,16 @@ header nav {
     padding: 5px;
 }
 
-p {
+p, li {
     font: 600 1em var(--jetbrains-mono-font);
     text-shadow: 0px 0px 0.4px #043865;
     color: var(--normal-text-color);
     padding: 5px;
+}
+
+ul {
+    margin-left: 2em;
+    list-style: url("../assets/telescope.png");
 }
 
 h2 {
@@ -64,16 +66,19 @@ h2 {
     color: var(--headings-color);
 }
 
-a {
+header nav a.nav-link {
+    margin: 0px 2em;
+}
+
+header nav a.nav-link, section#first-page article figure figcaption a, footer#contact p a {
     font: bold 1.2em var(--momo-font);
     color: var(--links-color);
     text-decoration: none;
-    margin: 0px 2em;
 
     transition: all 0.5s ease-in-out;
 }
 
-a:hover {
+header nav a.nav-link:hover, section#first-page article figure figcaption a:hover, footer#contact p a:hover {
     text-shadow: 0px 0px 0.33px black;
     color: var(--hover-effects);
 }
@@ -100,6 +105,15 @@ figure img {
     box-shadow: 0px 0px 4px var(--headings-color);
     border-radius: 5em;
     width: 80%;
+
+    transition: all 0.5s ease;
+}
+
+figure img:hover {
+    transform: rotate(-1deg) scale(1.05);
+    margin: 10px;
+
+    box-shadow: 0px 0px 7.67px thistle;
 }
 
 figure figcaption a {
@@ -108,9 +122,10 @@ figure figcaption a {
 }
 
 section#second-page {
-    background-image: url("../assets/astronaut-background.jpg");
+    background-image: url("../assets/astronaut.jpg");
+
     background-position: center center;
-    background-size: 100% 100vh;
+    background-size: 100% 100%;
     height: 100vh;
 
     box-shadow: 0px 0px 1em #076fd07e;
@@ -119,15 +134,18 @@ section#second-page {
 }
 
 main section#second-page h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #dfdae0;
-
+    font-family: var(--mozilla-headline-font);
+    color: var(--headings-color);
+    text-shadow: 0px 0px 3px rgba(200, 170, 255, 0.76);
+    font-weight: 900;
 }
 
 main section#second-page p {
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.584);
-    color: aliceblue;
-    max-width: 50%;
+    text-shadow: 0px 0px 1px #6a5baf32;
+    color: #09130f;
+    max-width: 65%;
+    font-weight: 800;
+    font-family: var(--funnel-display);
 }
 
 
@@ -136,13 +154,25 @@ main section article p {
 }
 
 main section#second-page div.button-area button {
-    background-color: rgb(105, 88, 255);
+    background-color: #7f76d0;
     font: 200 1.2em var(--momo-font);
-    border: 1px solid black;
-    margin: 45vh 0px 0px 2em;
+    margin: 2em;
+    box-shadow: 0px 0px 5px #9292ffc2;
     border-radius: 12px;
     padding: 15px 21px;
     cursor: pointer;
+    border: none;
+}
+
+
+footer#contact {
+    background-color: var(--footer-background-color);
+    text-align: center;
+    padding: 2em;
+}
+
+footer#contact p a {
+    color: var(--header-background-color-v2);
 }
 
 
@@ -156,4 +186,3 @@ span.special {
 strong {
     text-shadow: 0px 0px 0.77px var(--normal-text-color);
 }
-
