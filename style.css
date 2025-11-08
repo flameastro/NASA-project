@@ -80,7 +80,7 @@ section#first-page {
 }
 
 section#second-page {
-    background-image: url("../assets/astronaut.jpg");
+    background-image: url("assets/astronaut.jpg");
     background-position: center center;
     background-size: 100% 100%;
     height: 100vh;
@@ -149,7 +149,7 @@ p, li {
 
 ul {
     margin-left: 2em;
-    list-style: url("../assets/telescope.png");
+    list-style: url("assets/telescope.png");
 }
 
 h2 {
@@ -226,7 +226,7 @@ main section#second-page p {
     }
 
     section#second-page {
-        background-image: url("../assets/black-hole.jpg");
+        background-image: url("assets/black-hole.jpg");
 
         background-position: center center;
         background-size: 100% 100%;
