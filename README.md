@@ -16,6 +16,14 @@
 
 > Para saber mais sobre a **NASA**, vá até o [index.html](index.html).
 
+---
+
+## ☁️ Hospedagem
+> Este site está sendo hospedado pelo *GitHub* gratuitamente.
+> WebSite disponível em **https://flameastro.github.io/NASA-project/**
+
+---
+
 ## ☁️ Encontrou algum erro?
 > Não se esqueça de ir até as *issues* e inserir sua dúvida/erro!
 
